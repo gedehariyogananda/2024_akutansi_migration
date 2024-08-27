@@ -1,13 +1,12 @@
 -- migrate:up
 
-SET TIME ZONE 'Asia/Jakarta';
-CREATE TABLE companies (
+CREATE TABLE saleable_products (
     id integer not null primary key generated always as identity,
-    name VARCHAR(255) NOT NULL,
-    address TEXT NOT NULL,
+    product_name varchar(255) not null,
     created_at TIMESTAMP WITH TIME ZONE,
     updated_at TIMESTAMP WITH TIME ZONE
 );
 
 -- migrate:down
-DROP TABLE companies;
+DROP TABLE saleable_products;
+
