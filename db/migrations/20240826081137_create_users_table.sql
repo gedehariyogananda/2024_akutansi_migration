@@ -8,6 +8,7 @@ CREATE TABLE users (
     company_id integer not null,
     email VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
+    token VARCHAR(255) NULL,
     created_at TIMESTAMP WITH TIME ZONE,
     updated_at TIMESTAMP WITH TIME ZONE,
     FOREIGN KEY (company_id) REFERENCES companies(id) ON DELETE CASCADE ON UPDATE CASCADE
