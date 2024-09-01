@@ -10,5 +10,8 @@ CREATE TABLE companies (
     updated_at TIMESTAMP WITH TIME ZONE
 );
 
+INSERT INTO companies (name, address, image_company, created_at, updated_at) VALUES
+('PT Ari Ganteng', 'Jl. Merdeka No. 1, Jakarta', 'nusantara_jaya.png', now(), now());
+
 -- migrate:down
 DROP TABLE companies;

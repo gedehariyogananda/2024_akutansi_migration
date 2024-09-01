@@ -6,6 +6,14 @@ CREATE TABLE stock_types (
     created_at TIMESTAMP WITH TIME ZONE
 );
 
+INSERT INTO stock_types (type_name, created_at) VALUES
+('pcs', now()),
+('botol', now()),
+('liter', now()),
+('gram', now()),
+('kg', now()),
+('pak', now());
+
 -- migrate:down
 DROP TABLE stock_types;
 
